@@ -60,7 +60,7 @@ $hora_envio = date('H:i:s');
 
   // emails para quem será enviado o formulário
   $emailenviar = "vendas@partnerpneumatica.com.br";
-  $destino = $emailenviar;
+  $destino = $vendas@partnerpneumatica.com.br;
   $assunto = "Contato pelo Site";
 
   // É necessário indicar que o formato do e-mail é html
