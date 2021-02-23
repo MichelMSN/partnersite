@@ -1,5 +1,37 @@
-<?php
-//Variáveis
+<?php   
+
+// Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
+include "PHPMailer-master/PHPMailerAutoload.php"; 
+
+// Inicia a classe PHPMailer 
+$mail = new PHPMailer(); 
+
+// Método de envio 
+$mail->IsSMTP(); 
+
+// Enviar por SMTP 
+$mail->Host = "smtp.gmail.com"; 
+
+// Você pode alterar este parametro para o endereço de SMTP do seu provedor 
+$mail->Port = 587; 
+
+
+// Usar autenticação SMTP (obrigatório) 
+$mail->SMTPAuth = true; 
+
+// Usuário do servidor SMTP (endereço de email) 
+// obs: Use a mesma senha da sua conta de email 
+$mail->Username = 'vendas@partnerpneumatica.com.br'; 
+$mail->Password = 'saluvendas'; 
+
+// Configurações de compatibilidade para autenticação em TLS 
+$mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) ); 
+
+// Você pode habilitar esta opção caso tenha problemas. Assim pode identificar mensagens de erro. 
+// $mail->SMTPDebug = 2; 
+
+// Define o remetente 
+// Seu e-mail 
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
@@ -77,4 +109,5 @@ $hora_envio = date('H:i:s');
   $mgm = "ERRO AO ENVIAR E-MAIL!";
   echo "";
   }
+
 ?>
