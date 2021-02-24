@@ -21,8 +21,8 @@ $mail->SMTPAuth = true;
 
 // Usuário do servidor SMTP (endereço de email) 
 // obs: Use a mesma senha da sua conta de email 
-$mail->Username = 'vendas@partnerpneumatica.com.br'; 
-$mail->Password = 'saluvendas'; 
+$mail->Username = ''; 
+$mail->Password = ''; 
 
 // Configurações de compatibilidade para autenticação em TLS 
 $mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) ); 
